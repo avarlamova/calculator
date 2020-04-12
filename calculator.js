@@ -16,3 +16,7 @@ $("#delete").on('click', function () {
     value = $('#display').val();
     $('#display').val(value.substring(0, value.length - 1));
 })
+
+$('#night-mode').on('click', function () {
+   $(document).toggleClass('night-mode');
+})
