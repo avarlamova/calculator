@@ -18,5 +18,13 @@ $("#delete").on('click', function () {
 })
 
 $('#night-mode').on('click', function () {
-   $(document).toggleClass('night-mode');
+    $('#body').addClass('night-mode');
+    $('#day-mode').show();
+    $('#night-mode').hide();
 })
+
+$('#day-mode').on('click', function () {
+        $('#body').removeClass('night-mode');
+        $('#day-mode').hide();
+        $('#night-mode').show();
+    })
