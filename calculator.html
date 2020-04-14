@@ -4,7 +4,7 @@
       <link rel="stylesheet" type="text/css" href="calculator.css" />
     <title>Калькулятор</title>
 </head>
-<body id="body">
+<body>
       <button id="night-mode">Ночной режим</button>
        <button id="day-mode" hidden>Дневной режим</button>
     <form>
@@ -36,8 +36,9 @@
 
         <tr>
             <td><button id="0" onclick="insert(0)">0</button> </td>
+            <td><button id="00" onclick="insert('00')">00</button> </td>
             <td><button id="stop" onclick="insert('.')">.</button> </td>
-            <td> <input type="submit" id = "calculate" value="="></td>
+           <td colspan="2"><button id="calculate">=</button></td>
 
         </tr>
     </table>
