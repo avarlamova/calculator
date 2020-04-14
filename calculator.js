@@ -17,6 +17,13 @@ $("#delete").on('click', function () {
     $('#display').val(value.substring(0, value.length - 1));
 })
 
+let time = new Date().getHours();
+if (time > 18 || time < 6) {
+    $('#body').addClass('night-mode');
+    $('#day-mode').show();
+    $('#night-mode').hide();
+} 
+
 $('#night-mode').on('click', function () {
     $('#body').addClass('night-mode');
     $('#day-mode').show();
