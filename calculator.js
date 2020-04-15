@@ -123,6 +123,10 @@ $(window).keydown(function (e) {
 		case 13:
 			$('#display').val(eval($('#display').val()))
 			break;
+		case 8:
+			value = $('#display').val();
+			$('#display').val(value.substring(0, value.length - 1));
+			break;
 		case 110:
 			insert(".")
 			break;
