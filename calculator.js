@@ -20,20 +20,20 @@ $("#delete").on('click', function () {
 let time = new Date().getHours();
 if (time > 18 || time < 6) {
     $('#body').addClass('night-mode');
-    $('#day-mode').show();
-    $('#night-mode').hide();
+    $('#day').show();
+    $('#night').hide();
 } 
 
-$('#night-mode').on('click', function () {
+$('#night').on('click', function () {
     $('#body').addClass('night-mode');
-    $('#day-mode').show();
-    $('#night-mode').hide();
+    $('#day').show();
+    $('#night').hide();
 })
 
-$('#day-mode').on('click', function () {
+$('#day').on('click', function () {
         $('#body').removeClass('night-mode');
-        $('#day-mode').hide();
-        $('#night-mode').show();
+        $('#day').hide();
+        $('#night').show();
     })
 
 
@@ -121,7 +121,7 @@ $(window).keydown(function (e) {
 			insert("+")
 			break;
 		case 13:
-			calc()
+			$('#display').val(eval($('#display').val()))
 			break;
 		case 110:
 			insert(".")
