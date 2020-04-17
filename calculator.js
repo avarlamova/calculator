@@ -1,40 +1,45 @@
-﻿
-function insert(number) {
-    $('#display').val($('#display').val() + number);
-}
-
-$('#calculate').on('click', function () {
-    $('#display').val(eval($('#display').val()))
-}
-    )
-
-$("#delete-all").on('click', function () {
-    $('#display').val('')
-})
-
-$("#delete").on('click', function () {
-    value = $('#display').val();
-    $('#display').val(value.substring(0, value.length - 1));
-})
-
 let time = new Date().getHours();
 if (time > 18 || time < 6) {
-    $('#body').addClass('night-mode');
-    $('#day').show();
-    $('#night').hide();
-} 
+	$('body').addClass('night-mode');
+	$('#day').show();
+	$('#night').hide();
+}
 
 $('#night').on('click', function () {
-    $('#body').addClass('night-mode');
-    $('#day').show();
-    $('#night').hide();
+	$('body').addClass('night-mode');
+	$('#day').show();
+	$('#night').hide();
 })
 
 $('#day').on('click', function () {
-        $('#body').removeClass('night-mode');
-        $('#day').hide();
-        $('#night').show();
-    })
+	$('body').removeClass('night-mode');
+	$('#day').hide();
+	$('#night').show();
+})
+
+$("#delete-all").on('click', function () {
+	$('#display').val('')
+})
+
+function insert(value) {
+    $('#display').val($('#display').val() + value);
+}
+
+
+$('#calculate').on('click', function calc() {
+	let ev = eval($('#display').val());
+	let decimal = ev.toFixed(1);
+	if ((ev * 10) != decimal) {
+		$('#display').val(ev)
+	}
+	else
+		$('#display').val(decimal);
+	})
+
+$("#delete").on('click', function () {
+value = $('#display').val();
+$('#display').val(value.substring(0, value.length - 1));
+	})
 
 
 $(window).keydown(function (e) {
@@ -70,7 +75,7 @@ $(window).keydown(function (e) {
 			insert(9)
 			break;
 		case 191:
-			insert('+')
+			insert('/')
 			break;
 		case 190:
 			insert('.')
