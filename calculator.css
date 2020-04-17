@@ -1,17 +1,48 @@
+body {
+    background: linear-gradient(to top, #e0bff5, #e8d8f2) fixed;
+    margin:0;
+}
+
+table {
+    position: absolute;
+    top: 50%;
+    margin-top: -9em;
+    margin-left: 27em;
+}
 button {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 10px;
      cursor: pointer;
     background-color: #d3d3d3;
     font-family: 'Playfair Display', serif;
+    font-size: 28px;
+}
+
+#plus, #minus, #delete-all, #delete, #calculate, #multiply, #divide {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: orange;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
 }
 
 #display {
-    width: 280px;
+   font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    margin-top: -11em;
+    margin-left: 20em;
+    background-color: #f6fffa;
+    border-color: grey;
 }
+
 #calculate {
-    width:104px;
+    width:142px;
 }
 
 #night {
@@ -25,7 +56,7 @@ button {
     font-family: 'Playfair Display', serif;
     font-size: 14px;
     text-align: center;
-    color: white;
+    color: black;
     box-shadow: 0 16px 32px 0 rgba(0,40,120,.35);
     position: absolute;
     right: 0;
