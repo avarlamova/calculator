@@ -19,15 +19,19 @@ button {
     font-size: 28px;
 }
 
-#plus, #minus, #delete-all, #delete, #calculate, #multiply, #divide {
-    width: 70px;
-    height: 70px;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: orange;
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
+button:hover {
+        background-color: #a9a9a9;
+        cursor: pointer;
+    }
+
+.operations {
+    background-color:orange;
 }
+
+.operations:hover {
+        background-color: darkorange;
+        cursor: pointer;
+    }
 
 #display {
    font-family: Arial, Helvetica, sans-serif;
@@ -39,6 +43,8 @@ button {
     margin-left: 20em;
     background-color: #f6fffa;
     border-color: grey;
+     text-align: right;
+    border-radius: 10px;
 }
 
 #calculate {
