@@ -26,15 +26,17 @@ function insert(value) {
 }
 
 
-$('#calculate').on('click', function calc() {
-	let ev = eval($('#display').val());
-	let decimal = ev.toFixed(1);
-	if ((ev * 10) != decimal) {
-		$('#display').val(ev)
+function calc() {
+		let ev = eval($('#display').val());
+		let arr = ev.toString().split('');
+		if (arr.indexOf('.') === -1) {
+			$('#display').val(ev)
+		}
+		else {
+			$('#display').val(ev.toFixed(1))
+		}
 	}
-	else
-		$('#display').val(decimal);
-	})
+
 
 $("#delete").on('click', function () {
 value = $('#display').val();
@@ -126,7 +128,7 @@ $(window).keydown(function (e) {
 			insert("+")
 			break;
 		case 13:
-			$('#display').val(eval($('#display').val()))
+			calc();
 			break;
 		case 8:
 			value = $('#display').val();
