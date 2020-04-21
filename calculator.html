@@ -9,35 +9,35 @@
       <button id="night">Ночной режим</button>
        <button id="day" hidden>Дневной режим</button>
     <form>
-        <input size = "31" id="display">
+        <input placeholder="0" size = "31" id="display">
     </form>
     <table>
         <tr>
             <td><button id="7" onclick="insert(7)" value="7">7</button></td>
             <td><button id="8" onclick="insert(8)" value="8">8</button></td>
             <td><button id="9" onclick="insert(9)" value="9">9</button></td>
-            <td><button id="divide" onclick="insert('/')">/</button></td>
-            <td><button id="delete-all">C</button></td>
+            <td><button class="operations" id="divide" onclick="insert('/')">/</button></td>
+            <td><button class="operations" id="delete-all">C</button></td>
         </tr>
         <tr>
             <td><button id="4" onclick="insert(4)" value="4">4</button></td>
             <td><button id="5" onclick="insert(5)" value="5">5</button></td>
             <td><button id="6" onclick="insert(6)" value="6">6</button></td>
-            <td><button id="multiply" onclick="insert('*')">*</button></td>
-            <td><button id="delete"><-</button></td>
+            <td><button class="operations" id="multiply" onclick="insert('*')">*</button></td>
+            <td><button class="operations" id="delete"><-</button></td>
         </tr>
         <tr>
             <td><button id="1" onclick="insert(1)" value="1">1</button></td>
             <td><button id="2" onclick="insert(2)" value="2">2</button></td>
             <td><button id="3" onclick="insert(3)" value="3">3</button></td>
-            <td><button id="plus" onclick="insert('+')">+</button></td>
-            <td><button id="minus" onclick="insert('-')">-</button></td>
+            <td><button class="operations" id="plus" onclick="insert('+')">+</button></td>
+            <td><button class="operations" id="minus" onclick="insert('-')">-</button></td>
         </tr>
         <tr>
             <td><button id="0" onclick="insert(0)">0</button> </td>
             <td><button id="00" onclick="insert('00')">00</button> </td>
             <td><button id="stop" onclick="insert('.')">.</button> </td>
-           <td colspan="2"><button id="calculate">=</button></td>
+           <td colspan="2"><button class="operations" id="calculate">=</button></td>
         </tr>
     </table>
     <script src="jquery.js"></script>
