@@ -9,7 +9,8 @@
       <button id="night">Ночной режим</button>
        <button id="day" hidden>Дневной режим</button>
     <form>
-        <input placeholder="0" size = "31" id="display">
+        <input placeholder="0" size = "32" id="display" disabled>
+        <output id="result"></output>
     </form>
     <table>
         <tr>
@@ -37,7 +38,7 @@
             <td><button id="0" onclick="insert(0)">0</button> </td>
             <td><button id="00" onclick="insert('00')">00</button> </td>
             <td><button id="stop" onclick="insert('.')">.</button> </td>
-           <td colspan="2"><button class="operations" id="calculate">=</button></td>
+           <td colspan="2"><button class="operations" id="calculate" onclick="calc()">=</button></td>
         </tr>
     </table>
     <script src="jquery.js"></script>
