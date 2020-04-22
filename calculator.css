@@ -36,15 +36,33 @@ button:hover {
 #display {
    font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
+    height: 70px;
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    margin-top: -13em;
+    margin-left: 20em;
+    background-color: #f6fffa;
+    text-align: right;
+    color: gray;
+    border-radius: 10px 10px 0 0;
+}
+
+#result {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
     height: 60px;
     position: absolute;
     top: 50%;
-    margin-top: -11em;
+    border: none;
+    width: 363px;
+    margin-top: -10.1em;
     margin-left: 20em;
     background-color: #f6fffa;
-    border-color: grey;
-     text-align: right;
-    border-radius: 10px;
+    text-align: right;
+    border-radius: 0 0 10px 10px;
+    color: black;
 }
 
 #calculate {
