@@ -30,10 +30,10 @@ function calc() {
 		let ev = eval($('#display').val());
 		let arr = ev.toString().split('');
 		if (arr.indexOf('.') === -1) {
-			$('#display').val(ev)
+			$('#result').val(ev)
 		}
 		else {
-			$('#display').val(ev.toFixed(1))
+			$('#result').val(ev.toFixed(1))
 		}
 	}
 
