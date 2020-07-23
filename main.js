@@ -1,30 +1,28 @@
+
+//automatically switching to night mode at night
 let time = new Date().getHours();
 if (time > 18 || time < 6) {
 	$('body').addClass('night-mode');
-	$('#day').show();
-	$('#night').hide();
+	$('body').removeClass('day-mode');
+	$('.day').show();
+	$('.night').hide();
 }
 
 $('#night').on('click', function () {
 	$('body').addClass('night-mode');
-	$('#day').show();
-	$('#night').hide();
+	$('.day').show();
+	$('.night').hide();
 })
 
 $('#day').on('click', function () {
 	$('body').removeClass('night-mode');
-	$('#day').hide();
-	$('#night').show();
-})
-
-$("#delete-all").on('click', function () {
-	$('#display').val('')
+	$('.day').hide();
+	$('.night').show();
 })
 
 function insert(value) {
     $('#display').val($('#display').val() + value);
 }
-
 
 function calc() {
 		let ev = eval($('#display').val());
@@ -36,13 +34,17 @@ function calc() {
 			$('#result').val(ev.toFixed(1))
 		}
 	}
-
-
+//deleting one digit
 $("#delete").on('click', function () {
 value = $('#display').val();
 $('#display').val(value.substring(0, value.length - 1));
 	})
 
+//cleaning the display
+$("#delete-all").on('click', function () {
+$('#display').val('')
+})
+	
 
 $(window).keydown(function (e) {
 	switch (e.which) {

@@ -1,17 +1,19 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-      <link rel="stylesheet" type="text/css" href="calculator.css" />
-      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
     <title>Калькулятор</title>
 </head>
 <body>
-      <button id="night">Ночной режим</button>
-       <button id="day" hidden>Дневной режим</button>
+    <button class="night">Ночной режим</button>
+    <button class="day" hidden>Дневной режим</button>
+
     <form>
         <input placeholder="0" size = "32" id="display" disabled>
         <output id="result"></output>
     </form>
+    
     <table>
         <tr>
             <td><button id="7" onclick="insert(7)" value="7">7</button></td>
@@ -42,7 +44,7 @@
         </tr>
     </table>
     <script src="jquery.js"></script>
-    <script src="calculator.js"></script>
+    <script src="main.js"></script>
 
 </body>
 
