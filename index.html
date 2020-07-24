@@ -6,9 +6,9 @@
     <title>Калькулятор</title>
 </head>
 <body>
-    <button class="night">Ночной режим</button>
-    <button class="day" hidden>Дневной режим</button>
-
+    <button class="night-btn">Ночной режим</button>
+    <button class="day-btn" hidden>Дневной режим</button>
+<div id = "some" style="height: 400px; width: 400px;"></div>
     <form>
         <input placeholder="0" size = "32" id="display" disabled>
         <output id="result"></output>
@@ -27,7 +27,7 @@
             <td><button id="5" onclick="insert(5)" value="5">5</button></td>
             <td><button id="6" onclick="insert(6)" value="6">6</button></td>
             <td><button class="operations" id="multiply" onclick="insert('*')">*</button></td>
-            <td><button class="operations" id="delete"><-</button></td>
+            <td><button class="operations" id="delete">-</button></td>
         </tr>
         <tr>
             <td><button id="1" onclick="insert(1)" value="1">1</button></td>
@@ -40,12 +40,11 @@
             <td><button id="0" onclick="insert(0)">0</button> </td>
             <td><button id="00" onclick="insert('00')">00</button> </td>
             <td><button id="stop" onclick="insert('.')">.</button> </td>
-           <td colspan="2"><button class="operations" id="calculate" onclick="calc()">=</button></td>
+           <td colspan="2"><button class="operations" id="calculate" onclick="calculate()">=</button></td>
         </tr>
     </table>
     <script src="jquery.js"></script>
     <script src="main.js"></script>
-
 </body>
 
 </html>

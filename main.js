@@ -3,28 +3,27 @@
 let time = new Date().getHours();
 if (time > 18 || time < 6) {
 	$('body').addClass('night-mode');
-	$('body').removeClass('day-mode');
-	$('.day').show();
-	$('.night').hide();
+	$('.day-btn').show();
+	$('.night-btn').hide();
 }
 
-$('#night').on('click', function () {
+$('.night-btn').on('click', function () {
 	$('body').addClass('night-mode');
-	$('.day').show();
-	$('.night').hide();
+	$('.day-btn').show();
+	$('.night-btn').hide();
 })
 
-$('#day').on('click', function () {
+$('.day-btn').on('click', function () {
 	$('body').removeClass('night-mode');
-	$('.day').hide();
-	$('.night').show();
+	$('.day-btn').hide();
+	$('.night-btn').show();
 })
 
 function insert(value) {
     $('#display').val($('#display').val() + value);
 }
 
-function calc() {
+function calculate() {
 		let ev = eval($('#display').val());
 		let arr = ev.toString().split('');
 		if (arr.indexOf('.') === -1) {
