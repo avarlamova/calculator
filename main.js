@@ -19,20 +19,39 @@ $('.day-btn').on('click', function () {
 	$('.night-btn').show();
 })
 
+//calculation part
+
+let log = '';
+let result = '';
+
 function insert(value) {
     $('#display').val($('#display').val() + value);
 }
 
 function calculate() {
 		let ev = eval($('#display').val());
-		let arr = ev.toString().split('');
-		if (arr.indexOf('.') === -1) {
-			$('#result').val(ev)
+		let current;
+		let calculation = [],
+		current = ev;
+			for (let i = 0, ch; ch = s.charAt(i); i++) {
+				if ('^*/+-'.indexOf(ch) > -1) {
+					if (current == '' && ch == '-') {
+						current = '-';
+					} else {
+						calculation.push(parseFloat(current), ch);
+						current = '';
+					}
+				} else {
+					current += s.charAt(i);
+				}
+			}
+			if (current != '') {
+				calculation.push(parseFloat(current));
+			}
+			return calculation;
 		}
-		else {
-			$('#result').val(ev.toFixed(1))
-		}
-	}
+		
+
 //deleting one digit
 $("#delete").on('click', function () {
 value = $('#display').val();
@@ -41,10 +60,10 @@ $('#display').val(value.substring(0, value.length - 1));
 
 //cleaning the display
 $("#delete-all").on('click', function () {
-$('#display').val('')
+	$('#display').val('');
 })
 	
-
+//managing from the keyboard
 $(window).keydown(function (e) {
 	switch (e.which) {
 		case 48:
