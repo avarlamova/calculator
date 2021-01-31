@@ -19,37 +19,37 @@ $('.day-btn').on('click', function () {
 	$('.night-btn').show();
 })
 
-//calculation part
-
-let log = '';
-let result = '';
-
 function insert(value) {
     $('#display').val($('#display').val() + value);
 }
 
 function calculate() {
-		let ev = eval($('#display').val());
-		let current;
-		let calculation = [],
-		current = ev;
-			for (let i = 0, ch; ch = s.charAt(i); i++) {
-				if ('^*/+-'.indexOf(ch) > -1) {
-					if (current == '' && ch == '-') {
-						current = '-';
-					} else {
-						calculation.push(parseFloat(current), ch);
-						current = '';
-					}
-				} else {
-					current += s.charAt(i);
-				}
+		let result = $('#display').val();
+		result = Array.from(result);
+		let res;
+		for (let i = 0; i<result.length; i++) {
+			switch (result[i]){
+			case '+': 
+			res = parseInt(result[i-1])+parseInt(result[i+1]);
+			break;
+
+			case '-':
+			res = parseInt(result[i-1])-parseInt(result[i+1]);
+			break;
+
+			case '*':
+			res = parseInt(result[i-1])*parseInt(result[i+1]);
+			break;
+
+			case '/':
+			res = parseInt(result[i-1])/parseInt(result[i+1]);
+			break;
+
 			}
-			if (current != '') {
-				calculation.push(parseFloat(current));
+			
 			}
-			return calculation;
-		}
+			$('#display').val(res)
+	}
 		
 
 //deleting one digit
